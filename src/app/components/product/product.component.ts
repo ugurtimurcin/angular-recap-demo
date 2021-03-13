@@ -29,13 +29,6 @@ export class ProductComponent implements OnInit {
     })
   }
 
-  // getAll(){
-  //   this.productService.getAll().pipe(
-  //     tap(data=>console.log(JSON.stringify(data))),
-  //     catchError(this.handleError)
-  //   );
-  // }
-
   addToCart(product: Product){
     this.alertifyService.success(`${product.name} added to cart`)
   }
