@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="mb-3">
+    <input
+      [(ngModel)] = 'filterText'
+      class="form-control"
+      placeholder="Search product"
+    />
+    <div *ngIf='filterText' class="form-text">
+      Results for {{filterText}}
+    </div>
+  </div>
+  <div
+    *ngFor="let product of products | productFilter: filterText"
+    class="card mx-3 mb-3"
+    style="width: 17rem"
+  >
+    <img src="{{ product.imageUrl }}" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ product.name }}</h5>
+      <p class="card-text">
+        {{product.description}}
+      </p>
+      <p><strong>Price: </strong>{{product.price | currency}}</p>
+      <a (click) = 'addToCart(product)' class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
