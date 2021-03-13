@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { AlertifyService } from 'src/app/services/alertify/alertify.service';
 import { ProductService } from 'src/app/services/productService/product.service';
+import { tap, catchError } from 'rxjs/operators'
+import { HttpErrorResponse } from '@angular/common/http';
+import { throwError, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-product',
@@ -18,12 +21,33 @@ export class ProductComponent implements OnInit {
   }
 
   getAll(){
-    this.productService.getAll().subscribe(response=>{
+    this.productService.getAll().pipe(
+      tap(data=>console.log(JSON.stringify(data))),
+      catchError(this.handleError)
+    ).subscribe(response=>{
       this.products = response;
     })
   }
 
+  // getAll(){
+  //   this.productService.getAll().pipe(
+  //     tap(data=>console.log(JSON.stringify(data))),
+  //     catchError(this.handleError)
+  //   );
+  // }
+
   addToCart(product: Product){
     this.alertifyService.success(`${product.name} added to cart`)
+  }
+
+  handleError(err: HttpErrorResponse){
+    let errorMessage = '';
+    if(err.error instanceof ErrorEvent){
+      errorMessage = 'An error occurs ' + err.error.message;
+    }else{
+      errorMessage = 'System error';
+    }
+
+    return throwError(errorMessage);
   }
 }
