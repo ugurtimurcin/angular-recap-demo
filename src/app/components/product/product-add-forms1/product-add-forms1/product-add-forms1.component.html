@@ -1,0 +1,32 @@
+<h3 class="display-3">Add Product</h3>
+
+<form #productAddForm='ngForm' (ngSubmit)='addProduct(productAddForm)'>
+    <div class="form-group">
+        <input class="form-control" name="name" id="name" type="text" placeholder="Product Name" #name='ngModel' [(ngModel)]='model.name' required>
+        <div *ngIf='name.invalid && name.dirty' class="alert alert-danger">Name cannot be empty!</div>
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" name="description" id="description" type="text" placeholder="Description" #description='ngModel' [(ngModel)]='model.description' required>
+        <div *ngIf='description.invalid && description.dirty' class="alert alert-danger">Description cannot be empty!</div>
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" name="imageUrl" id="imageUrl" type="text" placeholder="imageUrl" #imageUrl='ngModel' [(ngModel)]='model.imageUrl' required>
+        <div *ngIf='imageUrl.invalid && imageUrl.dirty' class="alert alert-danger">Description cannot be empty!</div>
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" name="price" id="price" type="text" placeholder="price" #price='ngModel' [(ngModel)]='model.price' required>
+        <div *ngIf='price.invalid && price.dirty' class="alert alert-danger">Price cannot be empty!</div>
+    </div>
+
+    <div class="form-group">
+        <select class="form-control" [(ngModel)]='model.categoryId' #categoryId='ngModel' required id="categoryId" name='categoryId'>
+            <option selected disabled value="Categories">Categories</option>
+            <option *ngFor='let category of categories' [value] = 'category.id' >{{category.name}}</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled] = 'productAddForm.invalid'>Add Product</button>
+</form>

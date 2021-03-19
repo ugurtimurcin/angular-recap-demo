@@ -6,8 +6,7 @@
       "categoryId": 1,
       "description": "Logitech Mouse",
       "price": 10,
-      "imageUrl":
-        "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/logitech/thumb/TeoriV2-104450_large.jpg"
+      "imageUrl": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/logitech/thumb/TeoriV2-104450_large.jpg"
     },
     {
       "id": 2,
@@ -15,8 +14,7 @@
       "categoryId": 1,
       "description": "Rampage Keyboard",
       "price": 15,
-      "imageUrl":
-        "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/rampage/thumb/TeoriV2-104309_large.jpg"
+      "imageUrl": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/rampage/thumb/TeoriV2-104309_large.jpg"
     },
     {
       "id": 3,
@@ -24,16 +22,15 @@
       "categoryId": 1,
       "description": "Asus ZenBook",
       "price": 1300,
-      "imageUrl":"https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/TeoriV2-106045_large.jpg"
+      "imageUrl": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/TeoriV2-106045_large.jpg"
     },
     {
       "id": 3,
-      "name": "Baby\"s Bootle",
+      "name": "Baby's Bootle",
       "categoryId": 3,
       "description": "Baby\"s bootle",
       "price": 5,
-      "imageUrl":
-        "http://www.ilkebebe.com//UserFiles/ProductImages/0/ib44140/orj/wee-baby-klasik-genis-agizli-kulplu-pp-biberon-250-ml-138-mavi-229601.jpg"
+      "imageUrl": "http://www.ilkebebe.com//UserFiles/ProductImages/0/ib44140/orj/wee-baby-klasik-genis-agizli-kulplu-pp-biberon-250-ml-138-mavi-229601.jpg"
     },
     {
       "id": 1,
@@ -41,8 +38,24 @@
       "categoryId": 2,
       "description": "Wardrobe",
       "price": 10,
-      "imageUrl":
-        "https://www.fairwayfurniture.co.uk/images/products/standard/13735.jpg"
+      "imageUrl": "https://www.fairwayfurniture.co.uk/images/products/standard/13735.jpg"
+    },
+    {
+      "name": "MSI GF63",
+      "description": "msi gf63 core i7",
+      "imageUrl": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/msi/thumb/msi-gf63-core-i7-gorseli-109290_large.jpg",
+      "price": "1500",
+      "categoryId": "1",
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
     }
   ],
   "categories": [
